@@ -10,15 +10,46 @@ body {
 Add some style blocks below this line to style the cards.
 Feel free to borrow from Exercise 1.
 */
+img{
+    width:100%;
+  }
 
+div {
+    justify-content: center;
+}
+
+
+section {
+    border: grey;
+    border-width: 1px;
+    border-style: solid;
+    display: inline-block;
+    width: 22%;
+    margin: 1%;
+    justify-content: center;
+ }
+ 
+ p {
+     margin: 5px;
+ }
+
+ button {
+     margin: 5px;
+ }
 
 /* Tablet Media Query */
 @media only screen and (max-width: 1000px) {
-
+section {
+    display: inline-block;
+    width : 45%;    
+}
 }
 
 /* Mobile Phone Media Query */
 @media only screen and (max-width: 600px) {
-
+ section {
+     display: block;
+     width: 100%;
+ }
     
 }
