@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8"><title>Top Restaurant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Restaurant</title>
+</head>
+<body>
+    {% include 'includes/header.html' %}
+
+    <main>
+        {%for r in restaurant:%}
+            <section>
+                <h2>{{ r.get('name') }}</h2>
+                <img src= {{r.get('image_url')}} />
+                <h5>{{ r.get('display_address') }}</h5>
+                <div>
+                    <span id="label">
+                        <b>Price:</b> 
+                    </span>
+                    <span id="value">
+                        <i>{{ r.get('price') }}</i>
+                    </span>
+                </div>
+                <div>
+                    <span id="label">
+                        <b>Rating:</b> 
+                    </span>
+                    <span id="value">
+                        <i>{{ r.get('rating') }}</i>
+                    </span>
+                </div>   
+                <div>
+                    <span id="label">
+                        <b># Reviews:</b> 
+                    </span>
+                    <span id="value">
+                        <i>{{ r.get('review_count') }}</i>
+                    </span>
+                </div>            
+            </section>
+        {%endfor%}
+    </main>
+</body>
+</html>
+
